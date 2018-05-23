@@ -34,7 +34,8 @@ def main(argv):
           b_vexinst = True
 
    p = angr.Project(inputfile, load_options={'auto_load_libs': False})
-   cfg = p.analyses.CFGAccurate()
+   #cfg = p.analyses.CFGAccurate()
+   cfg = p.analyses.CFG()
    plot_cfg(cfg, outputfile, asminst=b_asminst, vexinst=b_vexinst)
 if __name__ == "__main__":
    main(sys.argv[1:])
