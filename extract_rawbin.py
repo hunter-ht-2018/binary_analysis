@@ -71,7 +71,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     
-    info = binary_loaded_info(args.app_bin, args.output)
+    info = binary_loaded_info(args.binary, args.output)
    
     print "base: ", hex(info['base'])
     print "entry: ", hex(info['entry'])
